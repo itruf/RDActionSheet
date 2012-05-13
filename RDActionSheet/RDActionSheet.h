@@ -24,6 +24,9 @@ typedef void(^CallbackBlock)(RDActionSheetResult result, NSInteger buttonIndex);
 @property (nonatomic, unsafe_unretained) NSObject <RDActionSheetDelegate> *delegate;
 @property (nonatomic, copy) CallbackBlock callbackBlock;
 
+@property (nonatomic) int numberOfButtons;
+@property (nonatomic) float backgroundAlpha;
+
 - (id)initWithDelegate:(NSObject <RDActionSheetDelegate> *)aDelegate cancelButtonTitle:(NSString *)cancelButtonTitle primaryButtonTitle:(NSString *)primaryButtonTitle destroyButtonTitle:(NSString *)destroyButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ... __attribute__ ((deprecated));
 - (id)initWithCancelButtonTitle:(NSString *)cancelButtonTitle primaryButtonTitle:(NSString *)primaryButtonTitle destroyButtonTitle:(NSString *)destroyButtonTitle otherButtonTitles:(NSString *)otherButtonTitles, ...;
 - (void)showFrom:(UIView *)view;
